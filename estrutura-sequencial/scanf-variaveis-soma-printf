@@ -1,0 +1,27 @@
+/*Faça um programa que:
+a) peça ao usuário para digitar um número inteiro;
+b) armazene esse número numa variável chamada
+num1;
+c) peça ao usuário para digitar outro número inteiro;
+d) armazene esse número numa variável chamada
+num2;
+e) some os valores e guarde o resultado numa
+variável chamada soma;
+f) exiba o resultado.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int main ()
+{
+    int num1,num2,soma;
+  
+    printf("Digite um numero inteiro\n");
+    scanf("%d",&num1);
+    printf("Digite outro numero inteiro\n");
+    scanf("%d",&num2);
+    soma=num1+num2;
+    printf("o valor da soma e: %d\n",soma);
+    
+    system("PAUSE");
+    return 0;
+}
