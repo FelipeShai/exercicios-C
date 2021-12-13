@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main ()
+{
+   float numero,antecessor,sucessor;
+   printf("digite um numero e veja seu antecessor e seu sucessor \n");
+   scanf("%f",&numero);
+   antecessor=numero-1;
+   sucessor=numero+1;
+   printf("o numero e: %.2f",numero);
+   printf(" e o antecessor e: %.2f",antecessor);
+   printf(" e o sucessor e: %.2f\n",sucessor);
+
+
+
+   system("PAUSE");
+   return 0;
+}
