@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main ()
+{
+   float numero1,numero2,soma,media;
+   printf("digite o numero1 e depois o numero2 para obter a soma e a media\n");
+   scanf("%f",&numero1);
+   scanf("%f",&numero2);
+   soma=numero1+numero2;
+   printf("a soma e: %.2f\n",soma);
+   media=soma/2;
+   printf("a media e: %.2f\n",media);
+   
+   system("PAUSE");
+   return 0;
+}

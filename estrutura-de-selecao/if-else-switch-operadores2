@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main ()
+{
+   char sexo;
+   printf("digite o sexo masculino ou feminino como M ou F\n");
+   scanf("%c",&sexo);
+   if (sexo == 'M'||'F'){
+       printf("sexo valido\n\n");}
+   
+   system("PAUSE");
+   return 0;
+}

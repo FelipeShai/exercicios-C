@@ -1,0 +1,25 @@
+/* Faça um programa que leia um número dado como
+entrada e apresente a mensagem “O número está na
+faixa de 20 a 90” se o valor fornecido estiver entre
+20 e 90.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+    float numero;
+    printf("digite o numero\n\n");
+    scanf("%f",&numero);
+    if(numero>=20 && numero<=90){
+        printf("o numero esta entre 20 e 90\n\n");
+                                                      }
+    else {
+        printf("o numero n esta entre 20 e 90\n\n");
+                                                      }
+         
+    system("PAUSE");
+    return 0;
+                
+    }

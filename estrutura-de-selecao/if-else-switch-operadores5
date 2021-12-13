@@ -1,0 +1,39 @@
+/*Uma empresa dará aumento aos seus funcionários,
+de acordo com sua Classe:
+a) Classe A = 0,10 (10%) de aumento;
+b) Classe B = 0,15 (15%) de aumento;
+c) Classe C = 0,20 (20%) de aumento.
+Usando o comando switch, faça um programa que leia
+o salário e a classe do funcionário, calcule e exiba os
+salários com os devidos aumentos.*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    float salario,novosalario; 
+    char classe;
+    printf("digite o seu salario e a classe\n\n\n");
+    scanf("%f,%c",&salario,&classe);
+    printf("seu salario e %f e sua classe e %c\n\n\n",salario,classe);
+
+
+    switch (classe){
+           case 'A':
+                novosalario=salario*1.10;
+                printf("seu salario atual e %f\n",novosalario);
+                break;
+           case 'B':
+                novosalario=salario*1.15;
+                printf("seu salario atual e %f\n",novosalario);
+                break;
+           case 'C':
+                novosalario=salario*1.20;
+                printf("seu salario atual e %f\n",novosalario);
+                break;
+                     }
+         
+    system("PAUSE");
+    return 0;
+                
+    }

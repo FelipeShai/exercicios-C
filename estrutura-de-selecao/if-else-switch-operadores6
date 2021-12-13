@@ -1,0 +1,42 @@
+/*Precisamos fazer um algoritmo para uma biblioteca
+que receba o tipo do usuário e a classificação do livro 
+e responda se o usuário pode ou não locar o livro
+seguindo as seguintes regras: Existem dois tipos de
+usuários: o tipo ‘A’ (aluno) e o tipo ‘P’ (professor).
+Existem duas classificações de livros: A e B. Livros
+do tipo A podem ser locados por qualquer usuário
+enquanto livros do tipo B só podem ser locados por
+professores.*/
+#include <stdio.h>
+#include <stdlib.h>
+int main ()
+{
+    char livros,usuario;
+    printf("digite a categoria do livro como A ou B\n");
+    scanf(" %c", &livros);
+    
+    if ((livros == 'A') || (livros=='B')){
+    printf("categoria valida, prossiga\n");
+    printf("agora digite o tipo de usuario, sendo A para aluno e P para professor\n");   }
+    else {
+    printf("categoria invalida, retorne para o inicio\n");}
+    
+    scanf( " %c", &usuario);
+    if ((usuario == 'A') || (usuario=='P')){
+    printf("classificacao de usuario aceita\n");   }
+    else {
+    printf("categoria invalida, retorne para o inicio\n");}                                                                                 
+   
+   if((livros=='A') && (usuario=='A')){
+   printf("acesso liberado\n");}
+   if((livros=='A') && (usuario=='P')){
+   printf("acesso liberado\n");}
+   if((livros=='B') && (usuario=='A')){
+   printf("acesso negado\n");}   
+   if((livros=='B') && (usuario=='P')){
+   printf("acesso liberado\n");}
+         
+         
+    system("PAUSE");
+    return 0;          
+}

@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+    float nota;
+    printf("digite a nota final\n\n");
+    scanf("%f",&nota);
+    if(nota>=60){
+                printf("aluno aprovado\n\n");
+                }
+    else 
+         {
+                printf("aluno reprovado\n\n");
+         }
+         
+    system("PAUSE");
+    return 0;
+                
+    }

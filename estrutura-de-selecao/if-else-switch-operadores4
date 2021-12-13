@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    float n1,n2,n3;
+    printf("digite tres numeros para vermos qual o menor\n\n\n");
+    scanf("%f,%f,%f",&n1,&n2,&n3);
+    printf ("%.2f, %.2f, %.2f\n\n",n1,n2,n3);
+    if(n1<n2 && n1<n3) {
+        printf("%.2f e menor\n\n",n1);
+        }
+    if(n2<n1 && n2<n3) {
+        printf("%.2f e menor\n\n",n2);
+        }
+    if(n3<n1 && n3<n2) {
+        printf("%.2f e menor\n\n",n3);
+        }
+         
+    system("PAUSE");
+    return 0;
+}
