@@ -1,8 +1,9 @@
 /*Faça um programa que calcule a média de 5 números
 inteiros dados como entrada e imprima o resultado.*/
-
+#include <stdio.h>
+#include <stdlib.h>
 int main ()
-{
+{   
 float numeros=0,valores=0,media=0,soma=0;
 printf("digite 5 numeros para retirar a media\n");
 for(numeros=0;numeros<=4;numeros++)
@@ -14,5 +15,5 @@ for(numeros=0;numeros<=4;numeros++)
     media=soma/numeros;
     printf("a soma e %.1f e a media e %.1f\n",soma,valores);
     system("PAUSE");
-    return 0;          
+    return 0;        
 }

@@ -3,6 +3,7 @@ o quadrado de cada um deles. Ao fim, imprima também o somatório dos cinco.*/
 
 #include <stdio.h>
 #include <stdlib.h>
+
 int main ()
 {
 

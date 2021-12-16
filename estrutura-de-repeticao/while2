@@ -1,0 +1,31 @@
+/*Faça um programa que fique em um laço solicitando a 
+digitação de números inteiros e só pare de solicitar a 
+digitação de novos números quando o usuário informar o número 0. 
+Quando o número 0 for informado, o programa deve exibir a quantidade de
+números digitados, a quantidade de números pares,
+a quantidade de números ímpares e a média dos
+valores dos números digitados.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+int contador,numero,contadorpar,contadorimpar;
+float media,total;
+numero==1;contador=0;contadorpar=0;contadorimpar=0;
+while(numero!=0){
+     printf("digite um numero diferente de 0\n");
+     scanf("%d",&numero);
+     contador++;
+     if(numero%2==0){
+     contadorpar++; }
+     if(numero%2!=0){
+     contadorimpar++; }
+     total=total+numero;
+     media=total/contador;
+    }   
+    
+printf("ao todo, foram %.1d numeros digitados, sendo %d deles impar e %d par, e a media igual a %.2f\n",contador,contadorimpar,contadorpar,media);
+system("PAUSE");
+return 0;
+}

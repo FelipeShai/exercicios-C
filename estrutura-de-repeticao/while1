@@ -1,0 +1,39 @@
+/*Faça um programa que leia os valores dos salários
+atuais dos funcionários de uma empresa e imprima
+os valores com aumento. Se o salário for menor ou
+igual a R$ 500,00, o programa deve aplicar um aumento de 0.10 (10%) e se for maior que R$ 500,00,
+o aumento deve ser de 0.08 (8%). Assim como no
+nosso último exemplo, o usuário é que deve informar quando deseja sair. Ou seja, ele deve digitar o
+salário de um funcionário e o programa vai exibir o
+valor com o aumento. Depois ele deve responder se
+deseja digitar outro salário ou não. Se ele responder
+que sim, deve-se solicitar o novo salário e exibir o
+valor com aumento. Então torna-se a perguntar se
+ele deseja informar um novo salário e repetir o laço
+até que ele não queira informar novos salários.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+
+{
+float salarioatual,menor500=1.10,maior500=1.08,novosalario=0;
+int resp=1;
+while(resp==1)
+     {
+        printf("insira o valor do seu salario\n");
+        scanf("%f",&salarioatual);
+        if(salarioatual<=500) {
+            novosalario=salarioatual*menor500;
+            printf("com o aumento do seu salario, o valor de %.2f passa a ser %.2f\n",salarioatual,novosalario);
+            }
+        if(salarioatual>500) {
+            novosalario=salarioatual*maior500;
+            printf("com o aumento do seu salario, o valor de %.2f passa a ser %.2f\n",salarioatual,novosalario);
+            }
+        printf("digite 1 se deseja continuar calculando\n");
+        scanf("%d",&resp);
+     }   
+system("PAUSE");
+return 0;
+}

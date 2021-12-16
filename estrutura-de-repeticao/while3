@@ -1,0 +1,24 @@
+
+/*No exercício 54, fizemos um programa para calcular o fatorial de um dado número. 
+Refaça tal exercício utilizando um laço while em lugar do laço for.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+float numero;
+printf("digite o numero para saber seu fatorial\n");
+scanf("%f",&numero);
+printf("o fatorial e\n");
+printf("%.f*",numero);
+while (numero!=1)
+{
+    numero=numero-1;
+    printf("%.f*",numero);
+                       
+}
+printf("fim\n");
+    system("PAUSE");
+    return 0; 
+}
