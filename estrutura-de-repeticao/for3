@@ -1,0 +1,21 @@
+/*Faça um programa que imprima todos os números
+pares no intervalo de 1 a 100*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+float numeros,valores=0;
+printf("estes sao os numeros pares de 1 a 100\n");
+
+for(numeros=0;numeros<=49;numeros++)
+{
+     valores=valores+2;
+     printf("o numero e %.1f\n",valores);
+}
+
+    system("PAUSE");
+    return 0;          
+}

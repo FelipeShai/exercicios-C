@@ -1,0 +1,20 @@
+/* Faça um programa que leia 5 valores reais e imprima
+o quadrado de cada um deles. Ao fim, imprima também o somatório dos cinco.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int main ()
+{
+
+float valores=0,potencia=0,soma=0,numeros;
+for(valores=0;valores<=4;valores++)
+{
+printf("digite os valores\n");
+scanf("%f",&numeros);
+potencia=(numeros*numeros);
+printf("o quadrado de %.1f e %.1f\n",numeros,potencia);
+soma=soma+numeros;
+}
+printf("a soma de tudo e %.1f\n",soma);
+system("PAUSE");
+return 0;

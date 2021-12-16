@@ -1,0 +1,32 @@
+/*Faça um programa que receba como entrada um valor inicial e um final de temperatura em graus Celsius e imprima, variando do valor inicial até o final,
+a temperatura em Celsius seguido do seu equivalente em Fahrenheit. Ou seja, faça uma conversão entre
+as duas medidas. Vale lembrar que a fórmula de conversão de Celsius para Fahrenheit é dada por: F=1,8C
++ 32, onde F é a temperatura em Fahrenheit e C a
+temperatura em Celsius. Por exemplo, suponha que
+o programa receba 8 como inicial e 10 como temperatura final. Ele deve imprimir:
+8 Celsius = 46,4 Fahrenheit
+9 Celsius = 48,2 Fahrenheit
+10 Celsius = 50,0 Fahrenheit*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+float repeticao,celsius1,celsius2,variacao,fahrenheit;
+printf("digite o primeiro valor em celsius em ordem crescente\n");
+scanf("%f",&celsius1);
+printf("digite o segundo valor em celsius\n");
+scanf("%f",&celsius2);
+variacao=celsius2-celsius1;
+
+for(repeticao=0;repeticao<=variacao;repeticao++)
+{
+    fahrenheit=celsius1*1.8+32;   
+    printf("o valor de %.1f celsius em fahrenheit e %.1f\n",celsius1,fahrenheit);
+    celsius1=celsius1+1;
+                    
+}
+    system("PAUSE");
+    return 0;          
+}

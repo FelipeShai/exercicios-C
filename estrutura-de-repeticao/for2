@@ -1,0 +1,18 @@
+/*Faça um programa que calcule a média de 5 números
+inteiros dados como entrada e imprima o resultado.*/
+
+int main ()
+{
+float numeros=0,valores=0,media=0,soma=0;
+printf("digite 5 numeros para retirar a media\n");
+for(numeros=0;numeros<=4;numeros++)
+{
+    scanf("%f",&valores);
+    printf("digite mais um valor\n");
+    soma=soma+valores;
+}
+    media=soma/numeros;
+    printf("a soma e %.1f e a media e %.1f\n",soma,valores);
+    system("PAUSE");
+    return 0;          
+}
