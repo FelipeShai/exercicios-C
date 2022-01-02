@@ -1,0 +1,26 @@
+/*Faça um programa que:
+a) preencha dois vetores A e B de 5 posições, com
+números inteiros;
+b) atribua a um vetor RES a soma do vetor A com B
+(a primeira posição de A será somada à primeira
+posição de B e o resultado será atribuído à primeira
+posição do vetor RES);
+c) mostre os valores do vetor RES.*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main ()
+{
+int indice;
+float A[5],B[5],RES;
+printf("preencha os dois vetores com 5 valores começando pelo vetor A e depois B\n");
+for(indice=0;indice<5;indice++){
+scanf("%f",&A[indice]);
+scanf("%f",&B[indice]);
+RES=A[indice]+B[indice];
+printf("res de A+B e %.f\n",RES);
+}
+ system("PAUSE");
+ return 0;
+}

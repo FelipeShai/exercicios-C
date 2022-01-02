@@ -1,0 +1,25 @@
+/*Faça um programa que solicite a digitação e armazene 20 
+números reais em um vetor. Depois o programa deve ficar 
+disponível para o usuário digitar o valor do índice para que 
+seja exibido o número armazenado no índice solicitado. 
+Para encerrar o programa, o usuário deve informar um índice 
+inválido (lembre-se de que para um vetor de 20 posições os 
+índices válidos são de 0 a 19).*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+int indice;
+float vetor[20],RES;
+printf("preencha os dois vetores com 5 valores começando pelo vetor A e depois B\n");
+for(indice=1;indice<21;indice++){
+scanf("%f",&vetor[indice]);
+}
+printf("de acordo com a ordem de numeros digitadas de 1 a 20, digite qual indice deseja visualizar\n");
+scanf("%d",&indice);
+printf("o valor e %.f\n",vetor[indice]);
+system("PAUSE");
+return 0;
+}
