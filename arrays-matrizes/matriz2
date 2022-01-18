@@ -1,0 +1,36 @@
+/*Carregue uma matriz 3 x 3 com os valores das
+vendas de uma loja, numero de determinado mese e 3 vendedores.
+Calcule e mostre qual foi o vendedor que mais vendeu.
+que vendeu mais.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int main ( )
+{
+ float vendas[3][3];
+ int linha,coluna;
+ for(linha = 0; linha < 3; linha++){
+ coluna=0;
+ printf("\n-----------------------------------");          
+ printf("\ndigite o codigo ou numero do vendedor: ");
+ scanf("%f",&vendas[linha][coluna]);
+ coluna++;
+ printf("\ndigite o numero do mes de venda: ");
+ scanf("%f",&vendas[linha][coluna]);
+ coluna++;
+ printf("\ndigite o valor vendido: ");
+ scanf("%f",&vendas[linha][coluna]);
+ }
+  if(vendas[0][2] > vendas[1][2] && vendas[0][2] > vendas[2][2]){
+   printf("o vendedor 1 vendeu mais no mes %.0f\n",vendas[0][1]);
+   }
+  if(vendas[1][2] > vendas[0][2] && vendas[1][2] > vendas[2][2]){
+   printf("o vendedor 2 vendeu mais no mes %.0f\n",vendas[1][1]);
+   }
+  if(vendas[2][2] > vendas[0][2] && vendas[2][2] > vendas[0][2]){
+   printf("o vendedor 3 vendeu mais no mes %.0f\n",vendas[2][1]);
+   }
+ system("PAUSE");
+ return 0;
+
+}
