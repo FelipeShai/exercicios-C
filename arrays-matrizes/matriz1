@@ -1,0 +1,38 @@
+/*Utilizando matriz, faça um programa que leia duas notas de 
+dez alunos e depois calcule e armazene a média 
+dos mesmos. Você deve utilizar uma matriz de 10 linhas por 3 colunas. 
+Cada linha representará as notas de um aluno. 
+Na primeira coluna serão armazenadas as notas da 
+primeira avaliação, na segunda coluna as
+ notas da segunda avaliação e na terceira coluna 
+a média calculada. Para finalizar, exiba a 
+quantidade de alunos com média abaixo de 6.0, 
+a quantidade acima de 6.0 e calcule a média da turma fazendo 
+a média aritmética entre as médias dos alunos.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int main ()
+{
+// LER 10 NOTAS E CALCULAR MEDIA OK
+float notas[10][3],soma=0,aprovado=0, reprovado=0;
+int linha,coluna;
+for(linha = 0; linha < 10; linha++){
+printf("\n-----------------------------------");
+printf("\ndigite a primeira nota = ");
+scanf ("%f",&notas[linha][0]);
+printf("\ndigite a segunda nota = ");
+scanf ("%f",&notas[linha][1]);
+notas[linha][3] = (notas[linha][0] + notas[linha][1])/2;
+printf("\nmedia: %.1f",notas[linha][3]);
+//EXIBIR QUANTIDADE DE ALUNOS COM MÉDIA ABAIXO E ACIMA DE 6.0
+if(notas[linha][3]>=6){
+aprovado++;}
+if(notas[linha][3]<6){
+reprovado++;}
+ }                  
+printf("\nO numero de alunos aprovados e:  %.0f.\n",aprovado);
+printf("E o numero de alunos reprovados e:  %.0f.\n",reprovado);
+system("PAUSE");
+return 0;
+}  
