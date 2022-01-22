@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+     char nome[5][15];
+     float salario[5][1];
+     int i;
+     for(i = 0 ; i < 5 ; i++){
+      printf("--------------------------------------\n");
+      printf("Digite o nome %d, por favor.\n",i);
+      gets(nome[i]);
+      printf("Insira o salario de %s, por favor.\n",nome[i]);
+      scanf("%f",&salario[i][0]);    
+                             }
+      system("PAUSE");
+      return 0;
+     }
