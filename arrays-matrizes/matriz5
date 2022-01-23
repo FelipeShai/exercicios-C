@@ -1,0 +1,55 @@
+/*
+ Crie um programa que leia e armazene o nome (no
+ máximo 10 caracteres), o valor de compra e o valor
+ de venda de 10 produtos. Os valores de compra e
+ venda devem ser armazenados em uma única matriz
+ de números reais, enquanto os nomes devem
+ ficar em uma matriz de caracteres. Após a leitura, o
+ programa deve ficar disponível para o usuário digi
+ tar o valor do índice para que seja exibido o nome
+ do produto armazenado nesse índice e o lucro obti
+ do com a venda desse produto. O lucro é dado pela
+ diferença entre o valor de venda e o valor de com
+ pra. Para encerrar o programa, o usuário deve informar
+ um indice invalido*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+ char nome[10][100],desejo;
+ float compraevenda[10][3];
+ int i;
+ printf("-------------------------\n");
+  for(i = 0; i < 2; i++){
+   printf("digite o nome do produto: ");
+   scanf(" %s",&nome[i]);
+   printf("digite o valor pelo qual o produto foi comprado: ");
+   scanf(" %f", &compraevenda[i][1]);
+   printf("agora digite o valor que foi vendido: ");
+   scanf(" %f", &compraevenda[i][2]);
+   printf("\no produto %s\n",nome[i]);
+   printf("foi comprado no valor de R$%.1f\n",compraevenda[i][1]);
+   printf("e vendido no valor de R$%.1f\n",compraevenda[i][2]);
+   compraevenda[i][3] = compraevenda[i][2] - compraevenda[i][1];
+   printf("-------------------------\n");
+   }
+   printf("deseja consultar o lucro dos produtos, S para sim, N para nao\n");
+   scanf(" %c", &desejo);
+   while(desejo == 'S' || desejo == 's'){
+    printf("digite o indice correspondente aos dados que deseja acessar: ");
+    scanf("%d",&i);
+    i = i-1;
+    if(compraevenda[i][3] > 0 && desejo == 'S' || desejo == 's'){
+    printf("o %s lucrou cerca de R$%.1f\n",nome[i],compraevenda[i][3]);
+    printf("deseja acessar o indice novamente, S para sim, N para nao\n");
+    scanf(" %c", &desejo);}
+    }
+    if(desejo == 'N' || desejo == 'n'){
+                 printf("volte sempre\n");}
+    if(desejo != 'S' && desejo != 's' && desejo != 'n' && desejo != 'N'){
+                 printf("indice invalido\n");
+                 }
+ system("PAUSE");
+ return 0;
+}       
