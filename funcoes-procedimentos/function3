@@ -1,0 +1,49 @@
+/*Faça um programa que leia os valores dos salários atuais dos funcionários de uma empresa e imprima
+os valores com aumento. A função main deve pedirao usuário para digitar o salário de um funcionário
+e chamar a função Calcula_Aumento ( ), receber o retorno desta função, imprimir o novo valor 
+do salário e perguntar se o usuário deseja digitar outro salário ou não. Se o usuário responder que sim, o
+ciclo deve se repetir até que o usuário responda que não. A função Calcula_Aumento deve seguir a seguinte
+regra para calcular o novo salário: se o salário for menor ou igual a R$ 500,00, deve aplicar
+um aumento de 0.10 (10%) e se for maior que R$ 500,00, o aumento deve ser de 0.08 (8%). 
+Essa função deve calcular o salário e retornar o valor para a função main ( ).*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float Calcula_Aumento(float salario){
+    float salarionovo;
+    if(salario < 500){
+        salarionovo = salario + (salario * 0.10);
+        printf ("o salario atual e: %.2f\n",salarionovo);
+    }
+    if(salario > 500){
+        salarionovo = salario + (salario * 0.08);
+        printf ("o salario atual e: %.2f\n",salarionovo);
+    }
+    return (salarionovo);
+}
+
+void Menu(){
+	printf("__________________________________\n");
+	printf("PAINEL DE ATUALIZACAO SALARIAL\n");
+	printf("Digite o valor atual:\n");
+	printf("__________________________________\n");
+}
+
+int main (){
+	float salario,salarionovo;
+	int consulta;
+	do{
+	Menu();
+	scanf("%f",&salario);
+	salarionovo = Calcula_Aumento(salario);
+	printf("__________________________________\n");
+	printf("deseja continuar consultando?\n 1 - Sim          0 - NAO\n");
+	scanf("%d",&consulta);
+	}
+	while(consulta == 1); 
+	printf("AGRADECEMOS O ACESSO\n");
+	
+	system("PAUSE");
+	return 0;
+}
