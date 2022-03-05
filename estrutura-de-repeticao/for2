@@ -1,7 +1,9 @@
 /*Faça um programa que calcule a média de 5 números
 inteiros dados como entrada e imprima o resultado.*/
+
 #include <stdio.h>
 #include <stdlib.h>
+
 int main ()
 {   
 float numeros=0,valores=0,media=0,soma=0;

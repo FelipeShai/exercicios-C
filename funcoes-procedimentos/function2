@@ -1,0 +1,95 @@
+/*Criar um programa que apresente um menu de seleções no programa principal. Esse menu deverá dar
+ao usuário a possibilidade de escolher uma entre quatro operações aritméticas. 
+Escolhida a opção desejada, deverá ser solicitada a entrada de dois números. 
+Processada a operação, o resultado deverá ser exibido. O programa deverá ser executado enquanto o usuário quiser.
+FUNÇÃO MAIN:
+• Chamará o procedimento Desenha_Menu que mostrará as opções na tela,
+• Receberá a opção do usuário,
+• Enquanto a opção do usuário for diferente de “0-sair”, pedirá dois números inteiros,
+• Utilizará o comando switch para chamar a função que corresponda à opção do usuário.
+FUNÇÃO DESENHA_MENU - Mostrará um menu
+de opções (“0-sair”), (“1–dividir”), (“2-somar”), (“3–multip”) e (“4-subtrair”).
+FUNÇÃO DIVIDIR – dividirá os valores lidos e mostrará o resultado.
+FUNÇÃO SOMAR– somará os valores lidos e mostrará o resultado.
+FUNÇÃO MULTIPLICAR– multiplicará os valores lidos e mostrará o resultado.
+FUNÇÃO SUBTRAIR – subtrairá os valores lidos e mostrará o resultado.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float soma (int n1, int n2){
+	 float resultado;
+	 resultado = (float) n1 + (float) n2;
+	 return resultado;
+}
+float subtrai (int n1, int n2){
+	 float resultado;
+	 resultado = (float) n1 - (float) n2;
+	 return (resultado);
+	 
+}
+float multiplica (int n1, int n2){
+	 float resultado;
+	 resultado = (float) n1 * (float) n2;
+	 return (resultado);
+}
+float divide (int n1, int n2){
+	 float resultado;
+	 resultado = (float) n1 / (float) n2;
+	 return (resultado);
+}
+void Desenha_Menu(){
+	int opcao;
+	printf("____________________________________________________\n");
+	printf("Este e o painel de escolha da operacao matematica.\n");
+	printf("1 - Soma                   2 - Subtracao\n");
+	printf("3 - Multiplicacao          4 - Divisao\n\n");
+	printf("           DIGITE a opcao desejada:\n");
+	printf("____________________________________________________\n");
+}
+int main(){
+	int opcao,num1,num2,painel;
+	float resultado;
+	do{
+	Desenha_Menu();
+	scanf("%d",&opcao);
+	if(opcao < 1 || opcao > 4){
+	printf("numero invalido, por favor, selecione uma opcao valida\n");
+	}
+			switch(opcao){
+			case 1:
+				printf("digite os numeros que deseja somar\n");
+				scanf("%d %d",&num1,&num2);
+				resultado = soma(num1,num2);
+				printf("resultado de %d + %d = %.f\n",num1,num2,resultado);
+				break;
+			case 2:
+				printf("digite os numeros que deseja subtrair\n");
+				scanf("%d %d",&num1,&num2);
+				resultado = subtrai(num1,num2);
+				printf("resultado de %d - %d = %.f\n",num1,num2,resultado);
+				break;
+			case 3:
+				printf("digite os numeros que deseja multiplicar\n");
+				scanf("%d %d",&num1,&num2);
+				resultado = multiplica(num1,num2);
+				printf("resultado de %d * %d = %.f\n",num1,num2,resultado);
+				break;	
+			case 4:
+				printf("digite os numeros que deseja dividir\n");
+				scanf("%d %d",&num1,&num2);
+				resultado = divide(num1,num2);
+				printf("resultado de %d / %d = %.f\n",num1,num2,resultado);
+				break;
+			}
+	printf("SAIR - 0         VOLTAR AO PAINEL - 1\n");
+	
+	scanf("%d",&painel);
+	if(painel < 1 || painel > 2){
+	printf("numero invalido, por favor, reinicie o programa\n");
+	}
+	}
+	while(painel == 1);
+	system("PAUSE");
+	return 0;
+}

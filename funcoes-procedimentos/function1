@@ -1,0 +1,28 @@
+/* Crie um programa que, usando uma função, retorne o valor da divisão de dois números inteiros para
+o programa principal e mostre o resultado.
+FUNÇÃO MAIN – pedirá os dois números inteiros,
+chamará a função DIVISAO e exibirá o resultado.
+FUNÇÃO DIVISÃO – dividirá os números e retornará o valor da divisão para main ( ).*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float divide (int n1, int n2){
+	 float resultado;
+	 resultado = (float) n1 / (float) n2;
+	 return (resultado);
+}
+int main (void)
+{
+	int numero1,numero2;
+	float resultado;
+	printf("digite dois numeros inteiros\n");
+	printf("neste momento, digite o primeiro numero=");
+	scanf("%d",&numero1);
+	printf("agora digite o segundo numero=");
+	scanf("%d",&numero2);
+	resultado = divide(numero1,numero2);
+	printf("Resultado = %.2f\n", resultado);
+	system("PAUSE");
+	return 0;
+}

@@ -6,7 +6,6 @@ o quadrado de cada um deles. Ao fim, imprima também o somatório dos cinco.*/
 
 int main ()
 {
-
 float valores=0,potencia=0,soma=0,numeros;
 for(valores=0;valores<=4;valores++)
 {
