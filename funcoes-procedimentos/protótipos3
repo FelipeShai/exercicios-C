@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float Calcula_Aumento(float salario);
+void Menu();
+
+int main (){
+	float salario,salarionovo;
+	int consulta;
+	do{
+	Menu();
+	scanf("%f",&salario);
+	salarionovo = Calcula_Aumento(salario);
+	printf("__________________________________\n");
+	printf("deseja continuar consultando?\n 1 - Sim          0 - NAO\n");
+	scanf("%d",&consulta);
+	}
+	while(consulta == 1); 
+	printf("AGRADECEMOS O ACESSO\n");
+	
+	system("PAUSE");
+	return 0;
+}
+float Calcula_Aumento(float salario){
+    float salarionovo;
+    if(salario < 500){
+        salarionovo = salario + (salario * 0.10);
+        printf ("o salario atual e: %.2f\n",salarionovo);
+    }
+    if(salario > 500){
+        salarionovo = salario + (salario * 0.08);
+        printf ("o salario atual e: %.2f\n",salarionovo);
+    }
+    return (salarionovo);
+}
+
+void Menu(){
+	printf("__________________________________\n");
+	printf("PAINEL DE ATUALIZACAO SALARIAL\n");
+	printf("Digite o valor atual:\n");
+	printf("__________________________________\n");
+}
