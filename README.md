@@ -10,8 +10,6 @@
 	<a href="https://www.w3schools.com/c/index.php">C</a></br></br>
 </h4>
 
-## Link para o site: 
-
 ## Status do Projeto: 
 <h4 align="center"> 
 	🚧  Lógica de Programação em C 🚀 Finalizado...  🚧
